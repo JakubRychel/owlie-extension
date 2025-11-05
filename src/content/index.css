@@ -1,0 +1,9 @@
+em.owlie-highlight {
+    all: unset !important;
+    background-color: rgba(33, 150, 243, 0.3) !important;
+}
+
+em.owlie-highlight:hover {
+    background-color: rgba(33, 150, 243, 0.5) !important;
+    cursor: pointer !important;
+}

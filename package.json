@@ -6,16 +6,20 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webextension-polyfill": "^0.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set INLINE_RUNTIME_CHUNK=false&&react-app-rewired build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch-build": "nodemon --watch src --ext js,jsx,ts,tsx --exec \"npm run build\""
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +38,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.269",
+    "@types/webextension-polyfill": "^0.10.7",
+    "customize-cra": "^1.0.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "nodemon": "^3.1.4",
+    "react-app-rewired": "^2.2.1"
   }
 }
